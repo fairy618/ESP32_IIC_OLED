@@ -8,8 +8,6 @@
  * Copyright (c) 2022 by Fairy 2754283833@qq.com, All Rights Reserved.
  */
 
-// form github
-
 #include "OLED.h"
 
 static const char *TAG = "i2c-simple-example";
@@ -31,6 +29,7 @@ void app_main(void)
     OLED_ShowCHinese(0 * 18, 0, 0);
     OLED_ShowCHinese(1 * 18, 0, 1);
     OLED_ShowCHinese(2 * 18, 0, 2);
+    OLED_ShowCHinese(3 * 18, 0, 3);
 
     // 显示单个字符
     OLED_ShowChar(0, 2, 'Q', 16);

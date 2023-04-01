@@ -18,7 +18,6 @@
 #define OLED_CMD 0
 #define OLED_DATA 1
 
-
 // 函数声明
 esp_err_t i2c_master_init(void);
 esp_err_t OLED_WR_Byte(uint8_t data, uint8_t cmd_);
@@ -30,7 +29,5 @@ void OLED_ShowNum(uint8_t x, uint8_t y, uint32_t num, uint8_t len, uint8_t size2
 uint32_t oled_pow(uint8_t m, uint8_t n);
 void OLED_ShowString(uint8_t x, uint8_t y, char *chr, uint8_t Char_Size);
 void OLED_ShowCHinese(uint8_t x, uint8_t y, uint8_t no);
-
-
 
 #endif /* __OLED_H__ */
