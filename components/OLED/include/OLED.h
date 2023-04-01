@@ -20,8 +20,8 @@
 
 
 // 函数声明
-static esp_err_t i2c_master_init(void);
-static esp_err_t OLED_WR_Byte(uint8_t data, uint8_t cmd_);
+esp_err_t i2c_master_init(void);
+esp_err_t OLED_WR_Byte(uint8_t data, uint8_t cmd_);
 void OLED_Init(void);
 void OLED_Set_Pos(uint8_t x, uint8_t y);
 void OLED_ShowChar(uint8_t x, uint8_t y, uint8_t chr, uint8_t Char_Size);

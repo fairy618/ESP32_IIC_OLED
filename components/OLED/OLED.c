@@ -5,7 +5,7 @@
 /**
  * @brief i2c master initialization
  */
-static esp_err_t i2c_master_init(void)
+esp_err_t i2c_master_init(void)
 {
     int i2c_master_port = I2C_MASTER_NUM;
 
@@ -29,13 +29,13 @@ static esp_err_t i2c_master_init(void)
  * @param {uint8_t} data 需要发送的内容，数据或者命令
  * @param {uint8_t} cmd_ 1:发送数据 0:发送命令
  */
-static esp_err_t OLED_WR_Byte(uint8_t data, uint8_t cmd_)
+esp_err_t OLED_WR_Byte(uint8_t data, uint8_t cmd_)
 {
     int ret;
 
     uint8_t write_buf[2] = {((cmd_ == 1) ? (0x40) : (0x00)), data};
 
-    ret = i2c_master_write_to_device(I2C_MASTER_NUM, OLED_ADDR, write_buf, sizeof(write_buf), I2C_MASTER_TIMEOUT_MS / portTICK_RATE_MS);
+    ret = i2c_master_write_to_device(I2C_MASTER_NUM, OLED_ADDR, write_buf, sizeof(write_buf), I2C_MASTER_TIMEOUT_MS / portTICK_PERIOD_MS);
 
     return ret;
 }
